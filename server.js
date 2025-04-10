@@ -28,6 +28,7 @@ app.use('/api', require('./routes/disableAlarm'));
 
 // ✅ Login routes
 app.get('/login', (req, res) => {
+  // Updated to correctly serve 'login.html' from 'public' directory
   res.sendFile(path.join(__dirname, 'public', 'login.html')); // Serve the login form
 });
 
