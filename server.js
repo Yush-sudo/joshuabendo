@@ -25,6 +25,7 @@ const users = [
 app.use('/api', require('./routes/auth'));
 app.use('/api', require('./routes/sensor'));
 app.use('/api', require('./routes/disableAlarm'));
+app.use('/api', require('./routes/intrusionAlert')(wss));
 
 // ✅ Login routes
 app.get('/login', (req, res) => {
